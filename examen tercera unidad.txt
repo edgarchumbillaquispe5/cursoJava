@@ -1,0 +1,60 @@
+Scanner prod=new Scanner(System.in);
+prodclas b=new prodclas();
+System.out.println("Ingrese el producto");
+b.nombre=prod.nextLine();
+System.out.println("Cantidad de Stock");
+b.stock=prod.nextInt();
+System.out.println("Precio del producto");
+b.precio=prod.nextDouble();
+System.out.println("Ancho del producto");
+b.ancho=prod.nextDouble();
+System.out.println("Alto del producto");
+b.alto=prod.nextDouble();
+System.out.println("profundo del producto");
+b.profundo=prod.nextDouble();
+System.out.println("Nombre: "+b.nombre());
+System.out.println("Stock: "+b.stock());
+System.out.println("precio: "+b.precio());
+System.out.println("valor total: "+b.calculo()+" soles");
+System.out.println("El volumen es : "+b.volumen());
+
+public class prodclas {
+String nombre;
+int stock;
+double precio;
+double alto;
+double ancho;
+double profundo;
+prodclas()
+{
+}
+prodclas(String nombre,int stock,double precio,double alto,double ancho,double profundo)
+{
+this.nombre=nombre;
+this.stock=stock;
+this.precio=precio;
+this.alto=alto;
+this.ancho=ancho;
+this.profundo=profundo;
+}
+public String nombre()
+{
+return nombre;
+}
+public int stock()
+{
+return stock;
+}
+public double precio()
+{
+return precio;
+}
+public double calculo()
+{
+return stock*precio;
+}
+public double volumen()
+{
+return ancho*alto*profundo;
+}
+}
